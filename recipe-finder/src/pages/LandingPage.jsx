@@ -1,14 +1,14 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="w-full h-full">
+      {/* Navbar */}
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">Discover Authentic African Flavors</h1>
-        <p className="mt-4 text-gray-600">Simple app skeleton for the recipe finder — working on layout.</p>
-      </main>
+
+      {/* Hero Section */}
+      <Hero />
     </div>
-  )
+  );
 }

@@ -1,13 +1,10 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 
-export default function LandingPage() {
+export default function LandingPage({ onNavigate, currentView }) {
   return (
     <div className="w-full h-full">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Hero Section */}
+      <Navbar onNavigate={onNavigate} currentView={currentView} />
       <Hero />
     </div>
   );

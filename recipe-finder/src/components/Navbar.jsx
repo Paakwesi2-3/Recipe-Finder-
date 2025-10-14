@@ -1,52 +1,71 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Menu, X, Search, Heart, User } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ currentView, onNavigate }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = ["Home", "Recipes", "Categories", "About"];
+  const navItems = [
+    { label: "Home", value: "landing" },
+    { label: "Recipes", value: "recipes" },
+    { label: "Categories", value: "categories" },
+    { label: "About", value: "about" },
+  ];
 
   return (
-    <nav className="bg-white border-b sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent text-white backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center cursor-pointer">
-            <span className="text-xl font-bold text-primary">AfriCuisine</span>
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => onNavigate("landing")}
+          >
+            <div className="w-9 h-9 border-2 border-yellow-400 flex items-center justify-center mr-3 rounded-full">
+              <span className="text-yellow-400 text-lg font-bold">🍲</span>
+            </div>
+            <span className="text-2xl font-semibold">Recipe Finder</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
-                key={item}
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                key={item.value}
+                onClick={() => onNavigate(item.value)}
+                className={`text-sm font-medium transition-all hover:text-yellow-400 ${
+                  currentView === item.value
+                    ? "text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                    : "text-white"
+                }`}
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="p-2 border rounded-md hover:bg-gray-100">
-              <Search className="h-4 w-4" />
-            </button>
-            <button className="p-2 border rounded-md hover:bg-gray-100">
-              <Heart className="h-4 w-4" />
-            </button>
-            <button className="p-2 border rounded-md hover:bg-gray-100">
-              <User className="h-4 w-4" />
-            </button>
+            {[Search, Heart, User].map((Icon, index) => (
+              <button
+                key={index}
+                className="p-2 border border-white/30 rounded-full hover:bg-white/10 transition"
+              >
+                <Icon className="h-5 w-5" />
+              </button>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 border rounded-md"
+              className="border border-white/40 p-2 rounded-lg"
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
@@ -54,14 +73,31 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-4 py-3 space-y-2">
-            {navItems.map((item) => (
+        <div className="md:hidden bg-black/80 backdrop-blur-md text-center py-4 space-y-3 border-t border-white/10">
+          {navItems.map((item) => (
+            <button
+              key={item.value}
+              onClick={() => {
+                onNavigate(item.value);
+                setIsMobileMenuOpen(false);
+              }}
+              className={`block w-full text-base font-medium py-2 transition-all ${
+                currentView === item.value
+                  ? "text-yellow-400"
+                  : "text-white hover:text-yellow-400"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+
+          <div className="flex justify-center space-x-5 pt-4 border-t border-white/20">
+            {[Search, Heart, User].map((Icon, index) => (
               <button
-                key={item}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
+                key={index}
+                className="p-2 border border-white/30 rounded-full hover:bg-white/10 transition"
               >
-                {item}
+                <Icon className="w-5 h-5" />
               </button>
             ))}
           </div>

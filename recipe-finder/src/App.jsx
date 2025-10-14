@@ -1,16 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import './index.css'
+import { useState } from "react";
+import LandingPage from "./pages/LandingPage";
+import RecipesPage from "./pages/RecipePages";
 
-function App() {
+export default function App() {
+  const [currentView, setCurrentView] = useState("landing");
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-      </Routes>
-    </Router>
-  )
+    <div>
+      {currentView === "landing" && (
+        <LandingPage onNavigate={setCurrentView} currentView={currentView} />
+      )}
+      {currentView === "recipes" && (
+        <RecipesPage onNavigate={setCurrentView} currentView={currentView} />
+      )}
+    </div>
+  );
 }
-
-export default App

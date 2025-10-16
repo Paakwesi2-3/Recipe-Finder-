@@ -1,53 +1,48 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function RecipeDetail({ recipe, onBack }) {
   if (!recipe) return null;
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={recipe.id}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 0.4 }}
-        className="max-w-4xl mx-auto px-6 py-16"
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-8">
+      <button
+        onClick={onBack}
+        className="mb-6 text-blue-600 hover:underline text-sm font-medium"
       >
-        <button
-          onClick={onBack}
-          className="mb-6 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition"
-        >
-          ← Back
-        </button>
+        ← Back to recipes
+      </button>
 
-        <div className="w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-lg mb-6">
-          <img
-            src={recipe.image}
-            alt={recipe.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <img
+        src={recipe.image}
+        alt={recipe.title}
+        className="w-full h-80 object-cover rounded-lg mb-6"
+      />
 
-        <h1 className="text-3xl font-bold mb-4 text-gray-800">
-          {recipe.title}
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">{recipe.description}</p>
+      <h1 className="text-3xl font-bold mb-4 text-gray-800 text-center">
+        {recipe.title}
+      </h1>
 
-        <h2 className="text-2xl font-semibold mb-3">Ingredients</h2>
-        <ul className="list-disc list-inside mb-8 text-gray-700 space-y-2">
-          {recipe.ingredients?.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+      <p className="text-gray-700 leading-relaxed mb-4 text-center">
+        {recipe.description}
+      </p>
 
-        <h2 className="text-2xl font-semibold mb-3">Instructions</h2>
-        <ol className="list-decimal list-inside text-gray-700 space-y-2">
-          {recipe.instructions?.map((step, index) => (
-            <li key={index}>{step}</li>
-          ))}
-        </ol>
-      </motion.div>
-    </AnimatePresence>
+      <h2 className="text-xl font-semibold mt-6 mb-2 text-gray-800">
+        Ingredients:
+      </h2>
+      <ul className="list-disc list-inside text-gray-700 mb-4">
+        {recipe.ingredients.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2 text-gray-800">
+        How to Prepare:
+      </h2>
+      <ol className="list-decimal list-inside text-gray-700 space-y-2">
+        {recipe.instructions.map((step, index) => (
+          <li key={index}>{step}</li>
+        ))}
+      </ol>
+    </div>
   );
 }

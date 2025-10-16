@@ -6,7 +6,7 @@ export default function Navbar({ currentView, onNavigate }) {
 
   const navItems = [
     { label: "Home", value: "landing" },
-    { label: "Recipes", value: "recipes" },
+    { label: "Recipes", value: "dashboard" },
     { label: "Categories", value: "categories" },
     { label: "About", value: "about" },
   ];

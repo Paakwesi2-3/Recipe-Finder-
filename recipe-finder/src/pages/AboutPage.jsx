@@ -10,7 +10,7 @@ export default function AboutPage({ onNavigate }) {
 
       {/* Hero Section */}
       <section className="relative bg-yellow-500 text-white py-20 text-center">
-        <h1 className="text-5xl font-bold mb-4">About AfriCuisine</h1>
+        <h1 className="text-5xl font-bold mb-4">About Recipe Finder</h1>
         <p className="max-w-3xl mx-auto text-lg leading-relaxed">
           Celebrating the rich culinary heritage of Africa through authentic
           recipes, cultural stories, and the vibrant flavors that connect us to
@@ -30,7 +30,7 @@ export default function AboutPage({ onNavigate }) {
             Our Mission
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            AfriCuisine is more than just a recipe platform—it's a celebration
+            Recipe Finder is more than just a recipe platform—it's a celebration
             of African culture through food. We preserve traditional cooking
             methods, share family recipes passed down through generations, and
             make authentic African cuisine accessible to home cooks everywhere.
@@ -133,7 +133,7 @@ export default function AboutPage({ onNavigate }) {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} AfriCuisine. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Recipe Finder. All rights reserved.</p>
       </footer>
     </div>
   );

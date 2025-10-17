@@ -29,9 +29,12 @@ export default function RecipeDetail({ recipe, onBack }) {
       <h2 className="text-xl font-semibold mt-6 mb-2 text-gray-800">
         Ingredients:
       </h2>
-      <ul className="list-disc list-inside text-gray-700 mb-4">
+      <ul className="grid md:grid-cols-2 gap-2 text-gray-700 mb-4">
         {recipe.ingredients.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className="flex items-start">
+            <span className="mr-2">•</span>
+            <span>{item}</span>
+          </li>
         ))}
       </ul>
 

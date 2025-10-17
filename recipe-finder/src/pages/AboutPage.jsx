@@ -22,7 +22,7 @@ export default function AboutPage({ onNavigate }) {
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
         <img
           src={aboutImage}
-          alt="African Cuisine"
+          alt="Recipe Finder"
           className="rounded-lg shadow-lg w-full h-80 object-cover"
         />
         <div>

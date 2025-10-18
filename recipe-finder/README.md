@@ -101,10 +101,9 @@ npm install
 npm run dev
 
 🔍 Future Improvements
-	•	Add live search functionality using an API
 	•	Implement user authentication and recipe submission
 	•	Enable favorites/bookmarking of dishes
-	•	Add Ghanaian map animation on About Page
+	
 
 ⸻
 

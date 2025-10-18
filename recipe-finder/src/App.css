@@ -1,12 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind entry directives are located in src/index.css; keep custom styles here */
 
 /* Update font-family to use Helvetica/system font stack */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
   /* Use a system font stack for Helvetica-like appearance */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -73,6 +72,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -83,6 +83,7 @@ html, body {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -92,6 +93,7 @@ html, body {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -138,10 +140,11 @@ html, body {
 }
 
 /* Responsive text scaling */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .text-6xl {
     @apply text-4xl;
   }
+
   .text-8xl {
     @apply text-5xl;
   }

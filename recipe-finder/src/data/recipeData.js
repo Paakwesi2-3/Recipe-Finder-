@@ -3,7 +3,7 @@ export const recipes = [
     id: 1,
     title: "Jollof Rice",
     description: "A classic West African dish made with rice, tomatoes, and spices.",
-    image: "/src/assets/images/jollof.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/jollof.jpg?updatedAt=1760771302924",
     cookTime: "45 mins",
     ingredients: [
       "2 cups long-grain rice",
@@ -28,7 +28,7 @@ export const recipes = [
     id: 2,
     title: "Fufu and Light Soup",
     description: "A Ghanaian staple dish made from cassava and plantain, served with spiced soup.",
-    image: "/src/assets/images/Fufu.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Fufu.jpg?updatedAt=1760771303040",
     cookTime: "1 hr 10 mins",
     ingredients: [
       "2 cups cassava flour or boiled cassava",
@@ -51,7 +51,7 @@ export const recipes = [
     id: 3,
     title: "Waakye",
     description: "A beloved Ghanaian rice and beans dish cooked with millet leaves for a unique flavor.",
-    image: "/src/assets/images/Waakye.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Waakye.jpg?updatedAt=1760771303138",
     cookTime: "1 hr 20 mins",
     ingredients: [
       "2 cups rice",
@@ -70,7 +70,7 @@ export const recipes = [
     id: 4,
     title: "Banku and Tilapia",
     description: "A Ghanaian favorite made from fermented corn and cassava dough served with grilled tilapia.",
-    image: "/src/assets/images/banku.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/banku.jpg?updatedAt=1760771302932",
     cookTime: "1 hr",
     ingredients: [
       "2 cups corn dough",
@@ -88,9 +88,9 @@ export const recipes = [
   },
   {
     id: 5,
-    title: "Egusi Soup",
-    description: "A popular West African soup made from melon seeds and spinach.",
-    image: "/src/assets/images/egusi soup.jpg",
+    title: "Egusi Stew",
+    description: "A popular West African stew made from melon seeds and spinach.",
+    image: "https://ik.imagekit.io/apeu5caqe/images/egusi%20soup.jpg?updatedAt=1760771302579",
     cookTime: "50 mins",
     ingredients: [
       "1 cup ground melon seeds",
@@ -111,7 +111,7 @@ export const recipes = [
     id: 6,
     title: "Kelewele",
     description: "Spicy fried plantains seasoned with ginger and pepper.",
-    image: "/src/assets/images/Kelewele.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Kelewele.jpg?updatedAt=1760771304249",
     cookTime: "25 mins",
     ingredients: [
       "3 ripe plantains",
@@ -131,7 +131,7 @@ export const recipes = [
     id: 7,
     title: "Kenkey and Fish",
     description: "Fermented corn dough steamed and served with fried fish and pepper sauce.",
-    image: "/src/assets/images/Kenkey.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Kenkey.jpg?updatedAt=1760771303157",
     cookTime: "1 hr 30 mins",
     ingredients: [
       "Corn dough",
@@ -150,7 +150,7 @@ export const recipes = [
     id: 8,
     title: "Groundnut Soup",
     description: "A rich peanut-based soup often served with rice balls or fufu.",
-    image: "/src/assets/images/Groundnut-Soup.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Groundnut-Soup.jpg?updatedAt=1760771303066",
     cookTime: "1 hr 15 mins",
     ingredients: [
       "1 cup peanut butter",
@@ -170,7 +170,7 @@ export const recipes = [
     id: 9,
     title: "Beans Stew (Red Red)",
     description: "Black-eyed beans stewed with palm oil and served with fried plantains.",
-    image: "/src/assets/images/Beans.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Beans.jpg?updatedAt=1760771304132",
     cookTime: "45 mins",
     ingredients: [
       "2 cups black-eyed beans",
@@ -190,7 +190,7 @@ export const recipes = [
     id: 10,
     title: "Shito",
     description: "A Ghanaian hot black pepper sauce served with rice, kenkey, or fish.",
-    image: "/src/assets/images/Shito.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Shito.jpg?updatedAt=1760771304026",
     cookTime: "1 hr",
     ingredients: [
       "1 cup dried fish powder",
@@ -211,7 +211,7 @@ export const recipes = [
     id: 11,
     title: "Tuo Zaafi",
     description: "A northern Ghanaian dish made from corn flour served with ayoyo soup.",
-    image: "/src/assets/images/Tuo-Zaafi.jpg",
+    image: "https://ik.imagekit.io/apeu5caqe/images/Tuo-Zaafi.jpg?updatedAt=1760771303274",
     cookTime: "1 hr",
     ingredients: [
       "2 cups corn flour",
